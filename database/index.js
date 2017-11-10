@@ -2,13 +2,28 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fetcher', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
-// var Cat = mongoose.model('Cat', { name: String });
+var Character = mongoose.model('Character', {
+  name: String,
+  race: String,
+  class: String,
+  strength: Number,
+  dexterity: Number,
+  constitution: Number,
+  intelligence: Number,
+  wisdom: Number,
+  charisma: Number
+});
 
-// var kitty = new Cat({ name: 'Zildjian' });
-// kitty.save(function (err) {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('meow');
-//   }
-// });
+let save = function(name, race, cl, str, dex, const, intel, wis, char, callback){
+  return new Character({
+    name: name,
+    race: race,
+    class: cl,
+    strength: str,
+    dexterity: dex,
+    constitution: const,
+    intelligence: intel,
+    wisdom: wis,
+    charisma: char
+  }).save(callback);
+}
