@@ -32,13 +32,12 @@ Once the project moves into development, the press release can be used as a touc
   > This app will roll the dice for you, generating the numbers that will be used for your stats, and assigning them based on the race and class that you choose so you know you will come out with a strong character.
 
 ## Quote from the Developer ##
-  > "I didn't come to this game to do chores, I want to get to playing!"
+  > "Our goal is to get people to have fun as quickly as possible."
 
 ## How to Get Started ##
   > Choose your race and class, then click generate. You stats will be automatically loaded for you. Give you character a name and save it for future games!
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
   > "Using RPG Stat Generator, my party and I were able to get the busy work out of the way and get to the fun part, going on adventures and playing the game!"
 
 ## Closing and Call to Action ##
