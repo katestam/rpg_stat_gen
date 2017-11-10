@@ -1,0 +1,26 @@
+{
+  "name": "rpg_stat_gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cakelyn/rpg_stat_gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cakelyn/rpg_stat_gen/issues"
+  },
+  "homepage": "https://github.com/cakelyn/rpg_stat_gen#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.1",
+    "nodemon": "^1.12.1",
+    "react": "^16.1.0"
+  }
+}
