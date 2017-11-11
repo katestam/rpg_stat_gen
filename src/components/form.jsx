@@ -3,8 +3,8 @@ class Form extends React.Component {
     super(props);
     this.state = {
       name: '',
-      race: '',
-      class: ''
+      race: 'dragonborn',
+      class: 'barbarian'
     };
   }
 
@@ -41,7 +41,7 @@ class Form extends React.Component {
 
           <label>Race:
             <select type="text" name="race" onChange={this.handleRace.bind(this)}>
-              <option type="text" defaultValue value="dragonborn">Dragonborn</option>
+              <option type="text" value="dragonborn">Dragonborn</option>
               <option type="text" value="dwarf">Dwarf</option>
               <option type="text" value="elf">Elf</option>
               <option type="text" value="gnome">Gnome</option>
@@ -55,7 +55,7 @@ class Form extends React.Component {
 
           <label>Class:
             <select type="text" name="class" onChange={this.handleClass.bind(this)}>
-              <option type="text" defaultValue value="barbarian">Barbarian</option>
+              <option type="text" value="barbarian">Barbarian</option>
               <option type="text" value="bard">Bard</option>
               <option type="text" value="cleric">Cleric</option>
               <option type="text" value="druid">Druid</option>
