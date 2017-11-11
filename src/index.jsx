@@ -1,7 +1,17 @@
-class Hello extends React.Component {
+class Index extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return <h1>Hello, world!</h1>
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <Form />
+        <Char_display />
+      </div>
+    )
   }
 }
 
-ReactDOM.render(<Hello/>, document.getElementById('app'));
+ReactDOM.render(<Index />, document.getElementById('app'));

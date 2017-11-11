@@ -1,0 +1,13 @@
+"use strict";
+
+var Char_display = function Char_display() {
+
+  return React.createElement(
+    "div",
+    null,
+    "Character display goes here"
+  );
+};
+
+window.Char_display = Char_display;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21wb25lbnRzL2NoYXJfZGlzcGxheS5qc3giXSwibmFtZXMiOlsiQ2hhcl9kaXNwbGF5Iiwid2luZG93Il0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLGVBQWUsU0FBZkEsWUFBZSxHQUFXOztBQUU1QixTQUNFO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FERjtBQUdELENBTEQ7O0FBT0FDLE9BQU9ELFlBQVAsR0FBc0JBLFlBQXRCIiwiZmlsZSI6ImNoYXJfZGlzcGxheS5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBDaGFyX2Rpc3BsYXkgPSBmdW5jdGlvbigpIHtcblxuICByZXR1cm4gKFxuICAgIDxkaXY+Q2hhcmFjdGVyIGRpc3BsYXkgZ29lcyBoZXJlPC9kaXY+XG4gIClcbn1cblxud2luZG93LkNoYXJfZGlzcGxheSA9IENoYXJfZGlzcGxheTsiXX0=

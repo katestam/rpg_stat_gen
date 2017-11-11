@@ -14,16 +14,18 @@ var Character = mongoose.model('Character', {
   charisma: Number
 });
 
-let save = function(name, race, cl, str, dex, const, intel, wis, char, callback){
+let save = function(name, race, cl, str, dex, con, intel, wis, char, callback){
   return new Character({
     name: name,
     race: race,
     class: cl,
     strength: str,
     dexterity: dex,
-    constitution: const,
+    constitution: con,
     intelligence: intel,
     wisdom: wis,
     charisma: char
   }).save(callback);
 }
+
+module.exports.save = save;
