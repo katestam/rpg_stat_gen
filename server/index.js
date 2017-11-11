@@ -5,6 +5,8 @@ const workers = require('./workers.js');
 require('dotenv').config();
 
 const app = express();
+app.set('port', (process.env.PORT || 1337));
+const port = app.get('port');
 
 app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
@@ -44,4 +46,4 @@ app.post('/newChar', (req, res) => {
 
 });
 
-app.listen((process.env.PORT || 1337), () => console.log(`listening on port ${port}`));
+app.listen(port, () => console.log(`listening on port ${port}`));
