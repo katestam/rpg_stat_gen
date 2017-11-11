@@ -1,8 +1,15 @@
-var Char_display = function() {
+class Char_display extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <div>Character display goes here</div>
-  )
+  render() {
+    return (
+      <div>
+        {this.props.characters}
+      </div>
+    )
+  }
 }
 
 window.Char_display = Char_display;

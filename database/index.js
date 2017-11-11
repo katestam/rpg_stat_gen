@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fetcher', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
-var Character = mongoose.model('Character', {
+var charSchema = mongoose.Schema({
   name: String,
   race: String,
   class: String,
@@ -14,18 +14,28 @@ var Character = mongoose.model('Character', {
   charisma: Number
 });
 
-let save = function(name, race, cl, str, dex, con, intel, wis, char, callback){
+var Character = mongoose.model('Character', charSchema);
+
+let save = function(name, race, cl, attr, callback){
   return new Character({
     name: name,
     race: race,
     class: cl,
-    strength: str,
-    dexterity: dex,
-    constitution: con,
-    intelligence: intel,
-    wisdom: wis,
-    charisma: char
+    strength: attr.str,
+    dexterity: attr.dex,
+    constitution: attr.con,
+    intelligence: attr.intel,
+    wisdom: attr.wis,
+    charisma: attr.char
   }).save(callback);
 }
 
+let query = function(callback) {
+  Character
+    .find({})
+    .limit(10)
+    .exec(callback)
+}
+
 module.exports.save = save;
+module.exports.query = query;

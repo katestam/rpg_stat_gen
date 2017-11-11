@@ -1,24 +1,34 @@
 class Index extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      characters: []
+    };
   }
 
-  post(data) {
-    // ajax call to newchar
+  get() {
+    var that = this;
+
+    $.ajax({
+      method: 'GET',
+      url: '/allChars'
+    }).then(function(data) {
+      that.state.characters = data;
+    }).done();
   }
 
-  generate(e) {
-    // take input from form
-    // put into data object
-    // send to post function
+  test(e) {
+    console.log(e);
+
+    e.preventDefault();
   }
 
   render() {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <Form generate={this.generate} />
-        <Char_display />
+        <Form test={this.test} />
+        <Char_display characters={this.characters}/>
       </div>
     )
   }

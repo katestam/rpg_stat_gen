@@ -87,7 +87,7 @@ var generateStats = function(charClass, callback) {
     }
   }
 
-  return attr;
+  callback(attr);
 }
 
 module.exports.generateStats = generateStats;

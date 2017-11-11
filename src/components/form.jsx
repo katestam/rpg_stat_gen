@@ -12,6 +12,8 @@ class Form extends React.Component {
             <option selected value="">Select a race...</option>
             <option type="text" value="dragonborn">Dragonborn</option>
             <option type="text" value="dwarf">Dwarf</option>
+            <option type="text" value="elf">Elf</option>
+            <option type="text" value="gnome">Gnome</option>
             <option type="text" value="half-elf">Half-elf</option>
             <option type="text" value="half-orc">Half-orc</option>
             <option type="text" value="halfling">Halfling</option>
