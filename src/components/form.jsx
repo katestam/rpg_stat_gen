@@ -9,6 +9,7 @@ class Form extends React.Component {
         <form method="POST" action="/newChar">
           <input type="text" name="name" type="text" placeholder="Character name..." required />
           <select name="race" required>
+            <option selected value="">Select a race...</option>
             <option type="text" value="dragonborn">Dragonborn</option>
             <option type="text" value="dwarf">Dwarf</option>
             <option type="text" value="half-elf">Half-elf</option>
@@ -18,6 +19,7 @@ class Form extends React.Component {
             <option type="text" value="tiefling">Tiefling</option>
           </select>
           <select type="text" name="class" required>
+            <option selected value="">Select a class...</option>
             <option type="text" value="barbarian">Barbarian</option>
             <option type="text" value="bard">Bard</option>
             <option type="text" value="cleric">Cleric</option>
