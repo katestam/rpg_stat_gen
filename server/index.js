@@ -10,8 +10,15 @@ app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.send('helloooooo wooooorld!');
+app.get('/allChars', (req, res) => {
+  // get all characters in db
+  db.query(function(err, data) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(data);
+    }
+  });
 });
 
 app.post('/newChar', (req, res) => {

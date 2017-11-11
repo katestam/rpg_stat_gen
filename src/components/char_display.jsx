@@ -1,15 +1,12 @@
-class Char_display extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+var Char_display = function(props) {
 
-  render() {
-    return (
-      <div>
-        {this.props.characters}
-      </div>
-    )
-  }
+  return (
+    <div>
+      {props.characters.map(function(char) {
+        return <Character char={char} />
+      })}
+    </div>
+  )
 }
 
 window.Char_display = Char_display;

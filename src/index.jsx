@@ -13,24 +13,31 @@ class Index extends React.Component {
       method: 'GET',
       url: '/allChars'
     }).then(function(data) {
-      that.state.characters = data;
+      that.setState({
+        characters: data
+      });
     }).done();
   }
 
   test(e) {
     console.log(e);
-
     e.preventDefault();
   }
 
+  componentDidMount() {
+    this.get();
+  }
+
   render() {
+
     return (
       <div>
         <h1>Hello, world!</h1>
         <Form test={this.test} />
-        <Char_display characters={this.characters}/>
+        <Char_display characters={this.state.characters}/>
       </div>
     )
+
   }
 }
 

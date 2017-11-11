@@ -1,35 +1,15 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var Char_display = function Char_display(props) {
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Char_display = function (_React$Component) {
-  _inherits(Char_display, _React$Component);
-
-  function Char_display(props) {
-    _classCallCheck(this, Char_display);
-
-    return _possibleConstructorReturn(this, (Char_display.__proto__ || Object.getPrototypeOf(Char_display)).call(this, props));
-  }
-
-  _createClass(Char_display, [{
-    key: "render",
-    value: function render() {
-      return React.createElement(
-        "div",
-        null,
-        this.props.characters
-      );
-    }
-  }]);
-
-  return Char_display;
-}(React.Component);
+  return React.createElement(
+    "div",
+    null,
+    props.characters.map(function (char) {
+      return React.createElement(Character, { char: char });
+    })
+  );
+};
 
 window.Char_display = Char_display;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21wb25lbnRzL2NoYXJfZGlzcGxheS5qc3giXSwibmFtZXMiOlsiQ2hhcl9kaXNwbGF5IiwicHJvcHMiLCJjaGFyYWN0ZXJzIiwiUmVhY3QiLCJDb21wb25lbnQiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7SUFBTUEsWTs7O0FBQ0osd0JBQVlDLEtBQVosRUFBbUI7QUFBQTs7QUFBQSx1SEFDWEEsS0FEVztBQUVsQjs7Ozs2QkFFUTtBQUNQLGFBQ0U7QUFBQTtBQUFBO0FBQ0csYUFBS0EsS0FBTCxDQUFXQztBQURkLE9BREY7QUFLRDs7OztFQVh3QkMsTUFBTUMsUzs7QUFjakNDLE9BQU9MLFlBQVAsR0FBc0JBLFlBQXRCIiwiZmlsZSI6ImNoYXJfZGlzcGxheS5qcyIsInNvdXJjZXNDb250ZW50IjpbImNsYXNzIENoYXJfZGlzcGxheSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yKHByb3BzKSB7XG4gICAgc3VwZXIocHJvcHMpO1xuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICB7dGhpcy5wcm9wcy5jaGFyYWN0ZXJzfVxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbndpbmRvdy5DaGFyX2Rpc3BsYXkgPSBDaGFyX2Rpc3BsYXk7Il19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21wb25lbnRzL2NoYXJfZGlzcGxheS5qc3giXSwibmFtZXMiOlsiQ2hhcl9kaXNwbGF5IiwicHJvcHMiLCJjaGFyYWN0ZXJzIiwibWFwIiwiY2hhciIsIndpbmRvdyJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJQSxlQUFlLFNBQWZBLFlBQWUsQ0FBU0MsS0FBVCxFQUFnQjs7QUFFakMsU0FDRTtBQUFBO0FBQUE7QUFDR0EsVUFBTUMsVUFBTixDQUFpQkMsR0FBakIsQ0FBcUIsVUFBU0MsSUFBVCxFQUFlO0FBQ25DLGFBQU8sb0JBQUMsU0FBRCxJQUFXLE1BQU1BLElBQWpCLEdBQVA7QUFDRCxLQUZBO0FBREgsR0FERjtBQU9ELENBVEQ7O0FBV0FDLE9BQU9MLFlBQVAsR0FBc0JBLFlBQXRCIiwiZmlsZSI6ImNoYXJfZGlzcGxheS5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBDaGFyX2Rpc3BsYXkgPSBmdW5jdGlvbihwcm9wcykge1xuXG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIHtwcm9wcy5jaGFyYWN0ZXJzLm1hcChmdW5jdGlvbihjaGFyKSB7XG4gICAgICAgIHJldHVybiA8Q2hhcmFjdGVyIGNoYXI9e2NoYXJ9IC8+XG4gICAgICB9KX1cbiAgICA8L2Rpdj5cbiAgKVxufVxuXG53aW5kb3cuQ2hhcl9kaXNwbGF5ID0gQ2hhcl9kaXNwbGF5OyJdfQ==
