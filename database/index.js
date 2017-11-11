@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher', { useMongoClient: true });
+require('dotenv').config();
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`, { useMongoClient: true });
 mongoose.Promise = global.Promise;
+
+// `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`
+// 'mongodb://localhost/fetcher'
 
 var charSchema = mongoose.Schema({
   name: String,
