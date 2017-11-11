@@ -41,8 +41,9 @@ class Index extends React.Component {
 
     return (
       <div>
-        <h1>Hello, world!</h1>
+        <h1>RPG Character Generator</h1>
         <Form post={this.post} />
+        <h4>Recently created characters...</h4>
         <Char_display characters={this.state.characters}/>
       </div>
     )

@@ -5,15 +5,15 @@ var Character = function(props) {
       <table>
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Race</td>
-            <td>Class</td>
-            <td>Strength</td>
-            <td>Dexterity</td>
-            <td>Constitution</td>
-            <td>Intelligence</td>
-            <td>Wisdom</td>
-            <td>Charisma</td>
+            <th>Name</th>
+            <th>Race</th>
+            <th>Class</th>
+            <th>Strength</th>
+            <th>Dexterity</th>
+            <th>Constitution</th>
+            <th>Intelligence</th>
+            <th>Wisdom</th>
+            <th>Charisma</th>
           </tr>
         </thead>
         <tbody>
