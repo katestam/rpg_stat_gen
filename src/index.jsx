@@ -3,11 +3,21 @@ class Index extends React.Component {
     super(props);
   }
 
+  post(data) {
+    // ajax call to newchar
+  }
+
+  generate(e) {
+    // take input from form
+    // put into data object
+    // send to post function
+  }
+
   render() {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <Form />
+        <Form generate={this.generate} />
         <Char_display />
       </div>
     )

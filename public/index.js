@@ -18,6 +18,18 @@ var Index = function (_React$Component) {
   }
 
   _createClass(Index, [{
+    key: 'post',
+    value: function post(data) {
+      // ajax call to newchar
+    }
+  }, {
+    key: 'generate',
+    value: function generate(e) {
+      // take input from form
+      // put into data object
+      // send to post function
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
@@ -28,7 +40,7 @@ var Index = function (_React$Component) {
           null,
           'Hello, world!'
         ),
-        React.createElement(Form, null),
+        React.createElement(Form, { generate: this.generate }),
         React.createElement(Char_display, null)
       );
     }
@@ -38,4 +50,4 @@ var Index = function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(Index, null), document.getElementById('app'));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qc3giXSwibmFtZXMiOlsiSW5kZXgiLCJwcm9wcyIsIlJlYWN0IiwiQ29tcG9uZW50IiwiUmVhY3RET00iLCJyZW5kZXIiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0lBQU1BLEs7OztBQUNKLGlCQUFZQyxLQUFaLEVBQW1CO0FBQUE7O0FBQUEseUdBQ1hBLEtBRFc7QUFFbEI7Ozs7NkJBRVE7QUFDUCxhQUNFO0FBQUE7QUFBQTtBQUNFO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FERjtBQUVFLDRCQUFDLElBQUQsT0FGRjtBQUdFLDRCQUFDLFlBQUQ7QUFIRixPQURGO0FBT0Q7Ozs7RUFiaUJDLE1BQU1DLFM7O0FBZ0IxQkMsU0FBU0MsTUFBVCxDQUFnQixvQkFBQyxLQUFELE9BQWhCLEVBQTJCQyxTQUFTQyxjQUFULENBQXdCLEtBQXhCLENBQTNCIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiY2xhc3MgSW5kZXggZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICBjb25zdHJ1Y3Rvcihwcm9wcykge1xuICAgIHN1cGVyKHByb3BzKTtcbiAgfVxuXG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cbiAgICAgICAgPGgxPkhlbGxvLCB3b3JsZCE8L2gxPlxuICAgICAgICA8Rm9ybSAvPlxuICAgICAgICA8Q2hhcl9kaXNwbGF5IC8+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuUmVhY3RET00ucmVuZGVyKDxJbmRleCAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTsiXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qc3giXSwibmFtZXMiOlsiSW5kZXgiLCJwcm9wcyIsImRhdGEiLCJlIiwiZ2VuZXJhdGUiLCJSZWFjdCIsIkNvbXBvbmVudCIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztJQUFNQSxLOzs7QUFDSixpQkFBWUMsS0FBWixFQUFtQjtBQUFBOztBQUFBLHlHQUNYQSxLQURXO0FBRWxCOzs7O3lCQUVJQyxJLEVBQU07QUFDVDtBQUNEOzs7NkJBRVFDLEMsRUFBRztBQUNWO0FBQ0E7QUFDQTtBQUNEOzs7NkJBRVE7QUFDUCxhQUNFO0FBQUE7QUFBQTtBQUNFO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FERjtBQUVFLDRCQUFDLElBQUQsSUFBTSxVQUFVLEtBQUtDLFFBQXJCLEdBRkY7QUFHRSw0QkFBQyxZQUFEO0FBSEYsT0FERjtBQU9EOzs7O0VBdkJpQkMsTUFBTUMsUzs7QUEwQjFCQyxTQUFTQyxNQUFULENBQWdCLG9CQUFDLEtBQUQsT0FBaEIsRUFBMkJDLFNBQVNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBM0IiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJjbGFzcyBJbmRleCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yKHByb3BzKSB7XG4gICAgc3VwZXIocHJvcHMpO1xuICB9XG5cbiAgcG9zdChkYXRhKSB7XG4gICAgLy8gYWpheCBjYWxsIHRvIG5ld2NoYXJcbiAgfVxuXG4gIGdlbmVyYXRlKGUpIHtcbiAgICAvLyB0YWtlIGlucHV0IGZyb20gZm9ybVxuICAgIC8vIHB1dCBpbnRvIGRhdGEgb2JqZWN0XG4gICAgLy8gc2VuZCB0byBwb3N0IGZ1bmN0aW9uXG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxoMT5IZWxsbywgd29ybGQhPC9oMT5cbiAgICAgICAgPEZvcm0gZ2VuZXJhdGU9e3RoaXMuZ2VuZXJhdGV9IC8+XG4gICAgICAgIDxDaGFyX2Rpc3BsYXkgLz5cbiAgICAgIDwvZGl2PlxuICAgIClcbiAgfVxufVxuXG5SZWFjdERPTS5yZW5kZXIoPEluZGV4IC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJykpOyJdfQ==
