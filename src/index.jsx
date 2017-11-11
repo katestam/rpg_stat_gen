@@ -2,8 +2,10 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters: []
+      characters: [],
+      posted: false
     };
+    this.post = this.post.bind(this);
   }
 
   get() {
@@ -19,9 +21,16 @@ class Index extends React.Component {
     }).done();
   }
 
-  test(e) {
-    console.log(e);
-    e.preventDefault();
+  post(data) {
+    var that = this;
+
+    $.ajax({
+      method: 'POST',
+      url: '/newChar',
+      data: JSON.stringify(data),
+      contentType: 'application/json'
+    }).then(this.get())
+    .done();
   }
 
   componentDidMount() {
@@ -33,7 +42,7 @@ class Index extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <Form test={this.test} />
+        <Form post={this.post} />
         <Char_display characters={this.state.characters}/>
       </div>
     )

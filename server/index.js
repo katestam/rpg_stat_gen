@@ -35,6 +35,7 @@ app.post('/newChar', (req, res) => {
       if (err) {
         res.send(err)
       } else {
+        console.log(charName, 'saved to database');
         res.send(newChar);
       }
     });

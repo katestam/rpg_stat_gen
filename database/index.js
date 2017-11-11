@@ -33,6 +33,7 @@ let save = function(name, race, cl, attr, callback){
 let query = function(callback) {
   Character
     .find({})
+    .sort({"_id": -1})
     .limit(10)
     .exec(callback)
 }

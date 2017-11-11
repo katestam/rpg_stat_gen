@@ -1,14 +1,42 @@
 class Form extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: '',
+      race: '',
+      class: ''
+    };
+  }
+
+  preparePost(e) {
+    e.preventDefault();
+    this.props.post(this.state);
+  }
+
+  handleName(e) {
+    this.setState({
+      name: e.target.value
+    });
+  }
+
+  handleRace(e) {
+    this.setState({
+      race: e.target.value
+    });
+  }
+
+  handleClass(e) {
+    this.setState({
+      class: e.target.value
+    });
   }
 
   render() {
     return (
       <div>
-        <form method="POST" action="/newChar">
-          <input type="text" name="name" type="text" placeholder="Character name..." required />
-          <select name="race" required>
+        <form>
+          <input type="text" name="name" onChange={this.handleName.bind(this)} placeholder="Character name..." required />
+          <select type="text" name="race" onChange={this.handleRace.bind(this)} required>
             <option selected value="">Select a race...</option>
             <option type="text" value="dragonborn">Dragonborn</option>
             <option type="text" value="dwarf">Dwarf</option>
@@ -20,7 +48,7 @@ class Form extends React.Component {
             <option type="text" value="human">Human</option>
             <option type="text" value="tiefling">Tiefling</option>
           </select>
-          <select type="text" name="class" required>
+          <select type="text" name="class" onChange={this.handleClass.bind(this)} required>
             <option selected value="">Select a class...</option>
             <option type="text" value="barbarian">Barbarian</option>
             <option type="text" value="bard">Bard</option>
@@ -35,7 +63,7 @@ class Form extends React.Component {
             <option type="text" value="warlock">Warlock</option>
             <option type="text" value="wizard">Wizard</option>
           </select>
-          <input type="submit" value="Generate!" />
+          <input type="submit" value="Generate!" onClick={this.preparePost.bind(this)} />
         </form>
       </div>
     )
