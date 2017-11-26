@@ -8,7 +8,7 @@ const app = express();
 app.set('port', (process.env.PORT || 1337));
 const port = app.get('port');
 
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 

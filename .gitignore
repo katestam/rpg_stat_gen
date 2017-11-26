@@ -34,3 +34,6 @@ bower_components/
 .floo
 .flooignore
 .env
+
+client/dist/bundle.js
+.babelrc
