@@ -7,7 +7,7 @@
     "start": "./node_modules/.bin/webpack -d --watch | nodemon server/index.js --inspect",
     "start-client": "./node_modules/.bin/webpack -d --watch",
     "start-server": "nodemon server/index.js --inspect",
-    "build": "webpack -p --config ./webpack.config.js --progress",
+    "build": "webpack --config ./webpack.config.js --progress",
     "postinstall": "npm run build"
   },
   "repository": {
