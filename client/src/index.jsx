@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Char_display from './components/char_display.jsx';
 import Form from './components/form.jsx';
 
@@ -47,12 +48,14 @@ class Index extends React.Component {
   render() {
 
     return (
-      <div>
-        <h1>RPG Character Generator</h1>
-        <Form post={this.post} />
-        <h4>Recently created characters...</h4>
-        <Char_display characters={this.state.characters}/>
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <h1>RPG Character Generator</h1>
+          <Form post={this.post} />
+          <h4>Recently created characters...</h4>
+          <Char_display characters={this.state.characters}/>
+        </div>
+      </MuiThemeProvider>
     )
 
   }
