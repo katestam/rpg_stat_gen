@@ -1,4 +1,5 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Form extends React.Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class Form extends React.Component {
               <option type="text" value="wizard">Wizard</option>
             </select>
           </label>
-          <input type="submit" value="Generate!" />
+          <RaisedButton primary={true} label="Generate!" type="submit" />
         </form>
       </div>
     )

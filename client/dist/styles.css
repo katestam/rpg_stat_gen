@@ -7,15 +7,6 @@ input {
   padding: 5px 5px;
 }
 
-input[type=submit] {
-  background-color: lightgreen;
-  border: 0;
-  border-radius: 5px;
-  font-weight: bold;
-  padding: 10px;
-  text-transform: uppercase;
-}
-
 label {
   padding: 10px;
 }
