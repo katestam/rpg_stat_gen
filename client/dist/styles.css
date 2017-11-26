@@ -2,13 +2,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+form > * {
+  margin: 10px;
+  vertical-align: bottom;
+}
+
 input {
   margin-left: 10px;
   padding: 5px 5px;
-}
-
-label {
-  padding: 10px;
 }
 
 select {
