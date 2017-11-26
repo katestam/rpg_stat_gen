@@ -6,11 +6,12 @@ import Form from './components/form.jsx';
 class Index extends React.Component {
   constructor(props) {
     super(props);
+    this.post = this.post.bind(this);
+    this.get = this.get.bind(this);
     this.state = {
       characters: [],
       posted: false
     };
-    this.post = this.post.bind(this);
   }
 
   get() {
@@ -34,8 +35,9 @@ class Index extends React.Component {
       url: '/newChar',
       data: JSON.stringify(data),
       contentType: 'application/json'
-    }).then(this.get())
-    .done();
+    }).then(function(res) {
+      that.get();
+    }).done();
   }
 
   componentDidMount() {

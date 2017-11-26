@@ -3,6 +3,10 @@ import React from 'react';
 class Form extends React.Component {
   constructor(props) {
     super(props);
+    this.preparePost = this.preparePost.bind(this);
+    this.handleName = this.handleName.bind(this);
+    this.handleRace = this.handleRace.bind(this);
+    this.handleClass = this.handleClass.bind(this);
     this.state = {
       name: '',
       race: 'dragonborn',
@@ -36,13 +40,13 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.preparePost.bind(this)}>
+        <form onSubmit={this.preparePost}>
           <label>Character name:
-            <input type="text" name="name" onChange={this.handleName.bind(this)} required />
+            <input type="text" name="name" onChange={this.handleName} required />
           </label>
 
           <label>Race:
-            <select type="text" name="race" onChange={this.handleRace.bind(this)}>
+            <select type="text" name="race" onChange={this.handleRace}>
               <option type="text" value="dragonborn">Dragonborn</option>
               <option type="text" value="dwarf">Dwarf</option>
               <option type="text" value="elf">Elf</option>
@@ -56,7 +60,7 @@ class Form extends React.Component {
           </label>
 
           <label>Class:
-            <select type="text" name="class" onChange={this.handleClass.bind(this)}>
+            <select type="text" name="class" onChange={this.handleClass}>
               <option type="text" value="barbarian">Barbarian</option>
               <option type="text" value="bard">Bard</option>
               <option type="text" value="cleric">Cleric</option>
