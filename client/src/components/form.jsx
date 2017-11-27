@@ -56,15 +56,15 @@ class Form extends React.Component {
                        value={this.state.race}
                        onChange={this.handleRace}
                        floatingLabelText="Race:">
-            <MenuItem type="text" value="dragonborn" primaryText="Dragonborn" />
-            <MenuItem type="text" value="drawf" primaryText="Dwarf" />
-            <MenuItem type="text" value="elf" primaryText="Elf" />
-            <MenuItem type="text" value="gnome" primaryText="Gnome" />
-            <MenuItem type="text" value="half-elf" primaryText="Half-elf" />
-            <MenuItem type="text" value="half-orc" primaryText="Half-orc" />
-            <MenuItem type="text" value="halfling" primaryText="Halfling" />
-            <MenuItem type="text" value="human" primaryText="Human" />
-            <MenuItem type="text" value="tiefling" primaryText="Tiefling" />
+            <MenuItem type="text" value="Dragonborn" primaryText="Dragonborn" />
+            <MenuItem type="text" value="Drawf" primaryText="Dwarf" />
+            <MenuItem type="text" value="Elf" primaryText="Elf" />
+            <MenuItem type="text" value="Gnome" primaryText="Gnome" />
+            <MenuItem type="text" value="Half-elf" primaryText="Half-elf" />
+            <MenuItem type="text" value="Half-orc" primaryText="Half-orc" />
+            <MenuItem type="text" value="Halfling" primaryText="Halfling" />
+            <MenuItem type="text" value="Human" primaryText="Human" />
+            <MenuItem type="text" value="Tiefling" primaryText="Tiefling" />
           </SelectField>
 
           <SelectField type="text"
@@ -72,18 +72,18 @@ class Form extends React.Component {
                        value={this.state.class}
                        onChange={this.handleClass}
                        floatingLabelText="Class:">
-            <MenuItem type="text" value="barbarian" primaryText="Barbarian" />
-            <MenuItem type="text" value="bard" primaryText="Bard" />
-            <MenuItem type="text" value="cleric" primaryText="Cleric" />
-            <MenuItem type="text" value="druid" primaryText="Druid" />
-            <MenuItem type="text" value="fighter" primaryText="Fighter" />
-            <MenuItem type="text" value="monk" primaryText="Monk" />
+            <MenuItem type="text" value="Barbarian" primaryText="Barbarian" />
+            <MenuItem type="text" value="Bard" primaryText="Bard" />
+            <MenuItem type="text" value="Cleric" primaryText="Cleric" />
+            <MenuItem type="text" value="Druid" primaryText="Druid" />
+            <MenuItem type="text" value="Fighter" primaryText="Fighter" />
+            <MenuItem type="text" value="Monk" primaryText="Monk" />
             <MenuItem type="text" value="paladin" primaryText="Paladin" />
-            <MenuItem type="text" value="ranger" primaryText="Ranger" />
-            <MenuItem type="text" value="rogue" primaryText="Rogue" />
-            <MenuItem type="text" value="sorcerer" primaryText="Sorcerer" />
-            <MenuItem type="text" value="warlock" primaryText="Warlock" />
-            <MenuItem type="text" value="wizard" primaryText="Wizard" />
+            <MenuItem type="text" value="Ranger" primaryText="Ranger" />
+            <MenuItem type="text" value="Rogue" primaryText="Rogue" />
+            <MenuItem type="text" value="Sorcerer" primaryText="Sorcerer" />
+            <MenuItem type="text" value="Warlock" primaryText="Warlock" />
+            <MenuItem type="text" value="Wizard" primaryText="Wizard" />
           </SelectField>
 
           <RaisedButton primary={true} label="Generate!" type="submit" />
