@@ -52,29 +52,29 @@ var generateStats = function(charClass, callback) {
 
   // put largest stat in class attributes
   var largestStat = getLargestStat(stats);
-  if (charClass === 'barbarian') {
+  if (charClass === 'Barbarian') {
     attr.str = largestStat;
-  } else if (charClass === 'bard') {
+  } else if (charClass === 'Bard') {
     attr.char = largestStat;
-  } else if (charClass === 'cleric') {
+  } else if (charClass === 'Cleric') {
     attr.wis = largestStat;
-  } else if (charClass === 'druid') {
+  } else if (charClass === 'Druid') {
     attr.wis = largestStat;
-  } else if (charClass === 'fighter') {
+  } else if (charClass === 'Fighter') {
     attr.str = largestStat;
-  } else if (charClass === 'monk') { // dex and wisdom
+  } else if (charClass === 'Monk') { // dex and wisdom
     attr.dex = largestStat;
-  } else if (charClass === 'paladin') { // str and char
+  } else if (charClass === 'Paladin') { // str and char
     attr.str = largestStat;
-  } else if (charClass === 'ranger') { // dex and wisdom
+  } else if (charClass === 'Ranger') { // dex and wisdom
     attr.dex = largestStat;
-  } else if (charClass === 'rogue') {
+  } else if (charClass === 'Rogue') {
     attr.dex = largestStat;
-  } else if (charClass === 'sorcerer') {
+  } else if (charClass === 'Sorcerer') {
     attr.char = largestStat;
-  } else if (charClass === 'warlock') {
+  } else if (charClass === 'Warlock') {
     attr.char = largestStat;
-  } else if (charClass === 'wizard') {
+  } else if (charClass === 'Wizard') {
     attr.intel = largestStat;
   }
 
