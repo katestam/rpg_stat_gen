@@ -15,14 +15,3 @@ input {
 select {
   margin-left: 10px;
 }
-
-table {
-  border-collapse: collapse;
-  margin: 10px 0 10px 0;
-  width: 800px;
-}
-
-th, td {
-  border: 1px solid;
-  padding: 10px;
-}
