@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/allChars', (req, res) => {
+app.get('/api/characters', (req, res) => {
   // get all characters in db
   db.query(function(err, data) {
     if (err) {
@@ -23,7 +23,7 @@ app.get('/allChars', (req, res) => {
   });
 });
 
-app.post('/newChar', (req, res) => {
+app.post('/api/characters', (req, res) => {
   console.log(req.body);
   var charName = req.body.name;
   var charRace = req.body.race;

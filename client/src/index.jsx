@@ -20,7 +20,7 @@ class Index extends React.Component {
 
     $.ajax({
       method: 'GET',
-      url: '/allChars'
+      url: '/api/characters'
     }).then(function(data) {
       that.setState({
         characters: data
@@ -33,7 +33,7 @@ class Index extends React.Component {
 
     $.ajax({
       method: 'POST',
-      url: '/newChar',
+      url: '/api/characters',
       data: JSON.stringify(data),
       contentType: 'application/json'
     }).then(function(res) {
