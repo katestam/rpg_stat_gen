@@ -1,21 +1,21 @@
-var rollDice = function() {
-  var stats = [];
-  var roll = [];
+const rollDice = () => {
+  const stats = [];
+  let roll = [];
 
   // get 6 stats
-  for (var i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i++) {
     // roll 4 random numbers
-    for (var j = 0; j < 4; j++) {
-      roll.push(Math.floor(Math.random() * 6 + 1));
+    for (let j = 0; j < 4; j++) {
+      roll.push(Math.floor((Math.random() * 6) + 1));
     }
     // sort roll
-    roll.sort(function(a, b) {
-      return b-a;
+    roll.sort((a, b) => {
+      return b - a;
     });
     // keep the 3 largest numbers
     roll.pop();
     // add 3 largest numbers together
-    stats.push(roll.reduce(function(acc, val) {
+    stats.push(roll.reduce( (acc, val) => {
       return acc + val;
     }));
     // reset roll
@@ -23,35 +23,34 @@ var rollDice = function() {
   }
 
   return stats;
-}
+};
 
-var getLargestStat = function(stats) {
-  var largest;
-  var dup = stats.slice();
+const getLargestStat = (stats) => {
+  let largest;
+  let dup = stats.slice();
 
-  dup = dup.sort(function(a, b) {
-    return a-b;
+  dup = dup.sort((a, b) => {
+    return a - b;
   });
 
   largest = dup.pop();
 
   return largest;
-}
+};
 
-
-var generateStats = function(charClass, callback) {
-  var attr = {
+const generateStats = (charClass, callback) => {
+  const attr = {
     str: null,
     dex: null,
     con: null,
     intel: null,
     wis: null,
-    char: null
-  }
-  var stats = rollDice();
+    char: null,
+  };
+  const stats = rollDice();
 
   // put largest stat in class attributes
-  var largestStat = getLargestStat(stats);
+  const largestStat = getLargestStat(stats);
   if (charClass === 'Barbarian') {
     attr.str = largestStat;
   } else if (charClass === 'Bard') {
@@ -81,13 +80,13 @@ var generateStats = function(charClass, callback) {
   stats.splice(stats.indexOf(largestStat), 1);
 
   // assign other attributes
-  for (var key in attr) {
+  for (let key in attr) {
     if (attr[key] === null) {
       attr[key] = stats.pop();
     }
   }
 
   callback(attr);
-}
+};
 
 module.exports.generateStats = generateStats;
